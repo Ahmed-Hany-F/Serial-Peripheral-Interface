@@ -1,0 +1,16 @@
+{E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master.v} {1 {vlog -work work -stats=none {E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Master
+
+Top level modules:
+	Master
+
+} {} {}} {E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master_tb.v} {1 {vlog -work work -stats=none {E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Master
+-- Compiling module Master_tb
+
+Top level modules:
+	Master_tb
+
+} {} {}}
