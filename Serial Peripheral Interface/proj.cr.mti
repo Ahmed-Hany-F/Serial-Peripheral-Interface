@@ -1,0 +1,38 @@
+{C:/Users/abdo/Desktop/modelSim/project 4/slave_testbench.v} {1 {vlog -work work -stats=none {C:/Users/abdo/Desktop/modelSim/project 4/slave_testbench.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Slave
+-- Compiling module slave_tb
+
+Top level modules:
+	slave_tb
+
+} {} {}} {C:/Users/abdo/Desktop/modelSim/project 4/Slave.v} {1 {vlog -work work -stats=none {C:/Users/abdo/Desktop/modelSim/project 4/Slave.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Slave
+
+Top level modules:
+	Slave
+
+} {} {}} {C:/Users/abdo/Desktop/modelSim/project 4/master_testbench.v} {1 {vlog -work work -stats=none {C:/Users/abdo/Desktop/modelSim/project 4/master_testbench.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Master
+-- Compiling module Master_tb
+
+Top level modules:
+	Master_tb
+
+} {} {}} {C:/Users/abdo/Desktop/modelSim/project 4/Master.v} {1 {vlog -work work -stats=none {C:/Users/abdo/Desktop/modelSim/project 4/Master.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Master
+
+Top level modules:
+	Master
+
+} {} {}} {C:/Users/abdo/Desktop/modelSim/project 4/integration.v} {1 {vlog -work work -stats=none {C:/Users/abdo/Desktop/modelSim/project 4/integration.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module DevelopmentTB
+
+Top level modules:
+	DevelopmentTB
+
+} {} {}}
