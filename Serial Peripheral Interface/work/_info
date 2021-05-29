@@ -8,52 +8,147 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/intelFPGA/20.1
-vMaster
-Z0 !s110 1622056406
+dC:/Users/abdo/Desktop/modelSim/project2
+vDevelopmentTB
+Z0 !s110 1622296693
 !i10b 1
-!s100 B?=CfSTCP:PB[BQf46h9`0
+!s100 iz?d`UzUG[26_NAA<[@H`2
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I>g7BH?_66]n37YNGgHD821
+I;=YF4El@`TXM9i;=[1ko:3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dE:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub
-w1622056266
-8E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master.v
-FE:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master.v
-!i122 67
-L0 1 101
+Z3 dC:/Users/abdo/Desktop/modelSim/project 4
+w1622291406
+8C:/Users/abdo/Desktop/modelSim/project 4/integration.v
+FC:/Users/abdo/Desktop/modelSim/project 4/integration.v
+!i122 76
+L0 1 111
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1622056406.000000
-!s107 E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master.v|
-!s90 -reportprogress|300|-work|work|-stats=none|E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master.v|
+Z5 !s108 1622296693.000000
+!s107 C:/Users/abdo/Desktop/modelSim/project 4/integration.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/abdo/Desktop/modelSim/project 4/integration.v|
 !i113 1
 Z6 o-work work
 Z7 tCvgOpt 0
+n@development@t@b
+vMaster
+R0
+!i10b 1
+!s100 azWL;zWlfB`_UaNNM5C2Q2
+R1
+I4R6zS3I`L=Ca2=8HJ`NM[3
+R2
+R3
+w1622295443
+8Master.v
+FMaster.v
+!i122 77
+L0 1 108
+R4
+r1
+!s85 0
+31
+R5
+Z8 !s107 Master.v|C:/Users/abdo/Desktop/modelSim/project 4/master_testbench.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/abdo/Desktop/modelSim/project 4/master_testbench.v|
+!i113 1
+R6
+R7
 n@master
 vMaster_tb
-R0
+Z10 !s110 1622296694
 !i10b 1
 !s100 N`D?PeC4dLhg]lzSP2;b]0
 R1
-IEZCDONiZh@BjBNbmV16Z93
+I;zmX:eVBIgheUaUa^H[GZ0
 R2
 R3
-w1622056404
-8E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master_tb.v
-FE:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master_tb.v
-!i122 66
+w1622295548
+8C:/Users/abdo/Desktop/modelSim/project 4/master_testbench.v
+FC:/Users/abdo/Desktop/modelSim/project 4/master_testbench.v
+!i122 77
 L0 2 280
 R4
 r1
 !s85 0
 31
 R5
-!s107 Master.v|E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master_tb.v|
-!s90 -reportprogress|300|-work|work|-stats=none|E:/college/CMP first year/Second Term/Advanced Logic Design/Project/Git-Hub/Master_tb.v|
+R8
+R9
 !i113 1
 R6
 R7
 n@master_tb
+vSLAVE
+!s110 1622294045
+!i10b 1
+!s100 <R0:X3[hLlYOc4NOJLcih3
+R1
+IH83TG`LB@?MgP>FW>co@E0
+R2
+R3
+w1622294044
+8C:/Users/abdo/Desktop/modelSim/project 4/Slave.v
+FC:/Users/abdo/Desktop/modelSim/project 4/Slave.v
+!i122 40
+L0 1 54
+R4
+r1
+!s85 0
+31
+!s108 1622294045.000000
+!s107 C:/Users/abdo/Desktop/modelSim/project 4/Slave.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/abdo/Desktop/modelSim/project 4/Slave.v|
+!i113 1
+R6
+R7
+n@s@l@a@v@e
+vSlave
+R10
+!i10b 1
+!s100 VXVEY:m^KNbzdzX0cBTzo1
+R1
+Ib5Z;Q0UQFeYgG5hZh_KYD3
+R2
+R3
+w1622296692
+8slave.v
+Fslave.v
+!i122 78
+L0 1 61
+R4
+r1
+!s85 0
+31
+Z11 !s108 1622296694.000000
+!s107 slave.v|C:/Users/abdo/Desktop/modelSim/project 4/slave_testbench.v|
+Z12 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/abdo/Desktop/modelSim/project 4/slave_testbench.v|
+!i113 1
+R6
+R7
+n@slave
+vslave_tb
+R10
+!i10b 1
+!s100 HiABl>l4N6nVbCCkH[X1n1
+R1
+I9NN;X0J6JL>M^B[@cdOiK3
+R2
+R3
+w1622295456
+8C:/Users/abdo/Desktop/modelSim/project 4/slave_testbench.v
+FC:/Users/abdo/Desktop/modelSim/project 4/slave_testbench.v
+!i122 78
+L0 2 356
+R4
+r1
+!s85 0
+31
+R11
+Z13 !s107 slave.v|C:/Users/abdo/Desktop/modelSim/project 4/slave_testbench.v|
+R12
+!i113 1
+R6
+R7

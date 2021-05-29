@@ -16,7 +16,6 @@ module Slave(reset, initialValue, slaveDataToSend, clk, cs, MOSI, MISO );
 
   wire CPHA=1;
   wire CPOL =0;
-  // for reassigning temp resovoir to data be shifted & sent again
   always@(cs)
   begin
   tempDataRegistered = dataRegistered;

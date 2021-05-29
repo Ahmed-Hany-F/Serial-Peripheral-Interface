@@ -27,6 +27,9 @@ output reg MOSI;
 //resvoir for data stored int the register
 reg [7:0]dateReserved;
 
+// temporary resovoir for shifting and sending
+reg [7:0]tempDateReserved;
+
 //enable for meking the first posedge clk to operate not the  negedge clk
 reg enable;
 
@@ -40,12 +43,14 @@ if(reset == 1)
 begin
  dateReserved = 0;
  masterDataReceived = dateReserved ;
+ tempDateReserved = dateReserved;
 end
 end
 
 //assign the selected slave to the master
 always@(slaveSelect)
 begin
+CS = 3'b111;
  case (slaveSelect)
 	0: CS = 3'b011;
 	1: CS = 3'b101;
@@ -59,7 +64,8 @@ end
 always@(masterDataToSend)
 begin
 dateReserved = masterDataToSend;
-masterDataReceived = dateReserved ;
+tempDateReserved = dateReserved;
+masterDataReceived = dateReserved;
 end
 
 // for shifting & sending
@@ -67,8 +73,8 @@ always@(posedge clk)
 begin
 if(counter < 8)
 begin
- MOSI = dateReserved[0];
- dateReserved = dateReserved>>1;
+ MOSI = tempDateReserved[0];
+ tempDateReserved = tempDateReserved>>1;
  SCLK = 1;
  enable = 1;
 end
@@ -81,8 +87,8 @@ begin
 if( counter < 8 && enable == 1)
 begin
 
- dateReserved[7] = MISO; 
- masterDataReceived = dateReserved ;
+ tempDateReserved[7] = MISO; 
+ masterDataReceived = tempDateReserved ;
  SCLK = 0;
  counter = counter + 1;
 end
@@ -92,6 +98,7 @@ end
 // to start transmitting 8 bits
 always@(posedge start)
 begin
+tempDateReserved = dateReserved;
 SCLK = 0;
 enable = 0;
 counter = 0;
