@@ -35,16 +35,24 @@ reg enable;
 
 // counter for 8 bits transmission
 reg [3:0]counter;
+assign counter = 8;
+
+// reg enabled to handle the problem of not assigning any data while transferring
+reg enable_for_storing;
+assign enable_for_storing = 1;
 
 //reset the stored to 0
 always@(reset)
 begin
-if(reset == 1)
-begin
- dateReserved = 0;
- masterDataReceived = dateReserved ;
- tempDateReserved = dateReserved;
-end
+ if(reset == 1)
+ begin
+  if(enable_for_storing == 1)
+  begin
+   dateReserved = 0;
+   masterDataReceived = dateReserved ;
+   tempDateReserved = dateReserved;
+  end
+ end
 end
 
 //assign the selected slave to the master
@@ -63,36 +71,50 @@ end
 //responsible for initializing the stored data
 always@(masterDataToSend)
 begin
-dateReserved = masterDataToSend;
-tempDateReserved = dateReserved;
-masterDataReceived = dateReserved;
+ if(enable_for_storing == 1)
+ begin
+ dateReserved = masterDataToSend;
+ tempDateReserved = dateReserved;
+ masterDataReceived = dateReserved;
+  if(start == 1)
+   begin
+   tempDateReserved = dateReserved;
+   SCLK = 0;
+   enable = 0;
+   counter = 0;
+   SCLK = 1;
+   end
+ end
 end
 
 // for shifting & sending
 always@(posedge clk)
 begin
-if(counter < 8)
-begin
- MOSI = tempDateReserved[0];
- tempDateReserved = tempDateReserved>>1;
- SCLK = 1;
- enable = 1;
-end
-
+ if(counter < 8)
+ begin
+  enable_for_storing = 0;
+  MOSI = tempDateReserved[0];
+  tempDateReserved = tempDateReserved>>1;
+  SCLK = 1;
+  enable = 1;
+ end
 end
 
 // for storing the recieved bit
 always@(negedge clk)
 begin
-if( counter < 8 && enable == 1)
-begin
-
- tempDateReserved[7] = MISO; 
- masterDataReceived = tempDateReserved ;
- SCLK = 0;
- counter = counter + 1;
-end
-
+ if( counter < 8 && enable == 1)
+ begin
+  tempDateReserved[7] = MISO; 
+  masterDataReceived = tempDateReserved ;
+  SCLK = 0;
+  counter = counter + 1;
+ end
+ else if(counter > 7)
+ begin
+  tempDateReserved = dateReserved;
+  enable_for_storing = 1;
+ end
 end
 
 // to start transmitting 8 bits
@@ -103,6 +125,7 @@ SCLK = 0;
 enable = 0;
 counter = 0;
 SCLK = 1;
+
 end
 
 endmodule
